@@ -1,0 +1,68 @@
+.pagination span {
+    width: 2rem;
+    height: 2rem;
+    padding: 5px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #33afaf;
+    color: var(--heading-color);
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.active__page {
+    background-color: #33afaf;
+    color: #fff !important;
+    border: none !important;
+}
+
+.section__title h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: rgba(67, 67, 67, 1.00);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1rem;
+}
+
+.section__title p {
+    color: rgba(143, 143, 143, 1.00);
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section__title-character {
+    display: flex;
+    padding-top: 1rem;
+}
+
+.section__title-character span {
+    /* display: unset; */
+    padding: 7px 30px;
+    font-size: 1rem;
+    font-style: calc(1.1rem / 1.5);
+    color: rgb(255, 109, 112);
+    margin-left: 10px;
+    background-color: rgba(247, 249, 250, 1.00);
+    border-radius: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.section__title-character span.active {
+    background-color: rgb(255, 109, 112);
+    color: #fff;
+}
+
+.character:hover {
+    background-color: rgb(255, 109, 112);
+    color: #fff;
+}
+
+.character:focus {
+    background-color: rgb(255, 109, 112);
+    color: #fff;
+}

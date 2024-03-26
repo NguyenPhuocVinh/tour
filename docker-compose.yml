@@ -1,0 +1,27 @@
+version: '1'
+
+services:
+  backend:
+    build:
+      context: ./Backend
+      dockerfile: ./Dockerfile
+    ports:
+      - "4000:4000"
+    networks:
+      - my_network
+
+
+  frontend:
+    depends_on:
+      - backend
+    build:
+      context: ./Frontend/client
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge

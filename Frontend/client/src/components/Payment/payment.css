@@ -1,0 +1,217 @@
+.payment {
+    padding: 20px;
+    border-radius: .5rem;
+    position: sticky;
+    margin-bottom: 60px;
+    margin-left: 9rem;
+}
+
+.payment__check-login h3 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.payment__form h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #212121;
+}
+
+.payment__bottom h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #212121;
+}
+
+.payment__form input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--heading-color);
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid rgb(229, 231, 235);
+}
+
+.payment__form input:focus {
+    outline: none;
+}
+
+.payment__info-form {
+    box-shadow: 0px 1px 2px rgba(3, 18, 26, 0.585);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.payment__info-form ::placeholder {
+    color: rgba(255, 39, 31, 0.581);
+    font-weight: 600;
+}
+
+.payment__info-form input {
+    border: 1px solid #ccccccaf;
+}
+
+.payment__info-form input:focus {
+    outline: none;
+    border: 1px solid #33afaf;
+}
+
+.payment__info-form h6 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(3, 18, 26, 0.882);
+    margin-bottom: 1.2rem;
+}
+
+.payment__info-form p {
+    font-size: 1rem;
+    color: rgba(3, 18, 26, 0.593);
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+
+.payment__bottom {
+    margin-top: 2rem;
+}
+
+.payment__bottom .payment__bottom-total {
+    padding: 1rem 0;
+    box-shadow: 0px 1px 2px rgba(3, 18, 26, 0.585);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    margin: 0;
+}
+
+.payment__bottom h3 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1.2rem;
+}
+
+.total__price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.total__quantity {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.total__payment {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.payment__bottom .total__payment {
+    background-color: rgb(1, 148, 243) 0px 0.5px 0px 0px inset;
+}
+
+.total__payment .total__payment-price {
+    font-weight: 700;
+    color: rgb(255, 94, 31);
+}
+
+.total__quantity .button__quantity {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: rgb(255, 94, 31);
+    margin: 0 20px;
+    background-color: rgb(229, 231, 235);
+    border: none;
+}
+
+.total__price .price__payment {
+    font-weight: 700;
+    color: rgb(255, 94, 31);
+}
+
+.total__payment .price__payment {
+    font-weight: 700;
+    color: rgb(255, 94, 31);
+}
+
+.payment__bottom-total .total__payment {
+    margin-top: 1rem;
+    margin-left: 1.3rem;
+}
+
+.payment__bottom .total__payment {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-left: 1.3rem;
+}
+
+.payment__bottom .total h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.payment .button__payment-method {
+    padding: 0.7rem 4rem;
+    background-color: rgb(255, 94, 31);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+
+.payment-rules {
+    margin-left: 1.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(3, 18, 26, 0.797);
+}
+
+.payment__form-img {
+    box-shadow: 0px 1px 2px rgba(3, 18, 26, 0.373);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.payment__form-img a {
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.payment__form-img img {
+    border-radius: 1rem 0 0 1rem;
+    width: 110%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment__form-img .payment__info p {
+    font-size: 1rem;
+    color: rgba(3, 18, 26, 0.91);
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    text-align: justify;
+}

@@ -1,0 +1,19 @@
+.categories__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tour__card {
+    flex: 0 0 18%; 
+}
+
+@media (max-width: 768px) {
+    .categories__container {
+        flex-wrap: wrap;
+    }
+
+    .tour__card {
+        flex: 0 0 48%; 
+        margin-bottom: 20px;
+    }
+}

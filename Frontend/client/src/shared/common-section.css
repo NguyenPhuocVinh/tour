@@ -1,0 +1,16 @@
+.common__section {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
+        url('../assets/images/VietNam13.jpg') no-repeat center center;
+    background-size: cover;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.search__bar {
+    display: flex;
+    margin-top: 2rem;
+    border-radius: 5px;
+}

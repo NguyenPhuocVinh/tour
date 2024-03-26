@@ -1,0 +1,86 @@
+name: CICD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        run: |
+          aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
+      
+      - name: Build & Push backend images Docker
+        run: |
+          docker build -t ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/backend:latest ./Backend/
+          docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/backend:latest
+  
+      - name: Build & Push frontend images Docker
+        run: |
+          cd Frontend/client/
+          npm install
+          npm run build
+          docker build -t ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/frontend:latest .
+          docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/frontend:latest
+
+  deploy-backend: 
+    needs: build
+    runs-on: ec2-backend
+    steps:
+      - name: Pull images from ECR
+        run: sudo docker pull ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/backend:latest
+
+      - name: Check for running containers
+        run: |
+          CONTAINER_ID=$(sudo docker ps -aq)
+          if [ ! -z "$CONTAINER_ID" ]; then
+            sudo docker rm -vf $CONTAINER_ID
+          else
+            echo "No running containers found."
+          fi
+      
+      - name: Delete images
+        run: |
+          sudo docker rmi -f $(sudo docker images -aq)
+
+      - name: Run new container
+        run: |
+          sudo docker run -d -p 80:4000 ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/backend:latest
+
+  deploy-frontend:
+    needs: build 
+    runs-on: ec2-frontend
+    steps:
+      - name: Pull images from ECR
+        run: sudo docker pull ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/frontend:latest
+
+      - name: Check for running containers
+        run: |
+          CONTAINER_ID=$(sudo docker ps -aq)
+           if [ ! -z "$CONTAINER_ID" ]; then
+             sudo docker rm -vf $CONTAINER_ID
+           else
+             echo "No running containers found."
+           fi
+      
+      - name: Delete images
+        run: |
+          sudo docker rmi -f $(sudo docker images -aq)
+
+      - name: Run new container
+        run: |
+          sudo docker run -d -p 80:80 ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/frontend:latest

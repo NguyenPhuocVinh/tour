@@ -1,0 +1,36 @@
+.feature__tour-title {
+    font-size: 1.6rem;
+    color: rgba(67, 67, 67, 1.00);
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.feature__tour-subtitle {
+    padding-top: 0.5rem;
+    color: rgba(143, 143, 143, 1.00);
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: -0.5rem;
+}
+
+.view-all-link {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 15px;
+    color: #007bff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.view-all-link:hover {
+    color: #0056b3;
+    padding: 0 10px;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 0.5rem;
+}
+
+.view-all-link i {
+    margin-left: 5px;
+    font-size: 1rem;
+}

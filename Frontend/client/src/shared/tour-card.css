@@ -1,0 +1,118 @@
+
+.tour__card a{
+    text-decoration: none;
+}
+
+.tour__img {
+    width: 100%;
+    height: 190px;
+    border-radius: 7px 7px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.tour__img img {
+    width: 100%;
+    height: 100%;
+    transition: transform .3s;
+}
+
+.tour__img:hover img {
+    transform: scale(1.1);
+}
+
+.tour__img:hover {
+    border-radius: 7px;
+}
+
+.card{
+    border: none !important;
+    box-shadow: rgb(0,0,0,0.2) 0px 20px 50px -10px;
+    cursor: pointer;
+}
+
+.tour__img{
+    position: relative;
+    overflow: hidden;
+}
+
+.tour__img span{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    height: max-content;
+    z-index: 10;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px 0 0 0;
+}
+
+.card__top span i{
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+.tour__location{
+    color: #fff;
+    padding: 6px 12px;
+    background-color: rgba(255, 109, 112, 1.00);
+    border-radius: 7px 0 7px 0 ;
+    font-weight: 600;
+    font-size: .9rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tour__title{
+    font-size: .9rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.tour__title{
+    font-weight: 700;
+    text-decoration: none;
+    color: rgba(67, 67, 67, 1.00);
+    transition: .3s;
+}
+
+.tour__title:hover{
+    color: rgba(255, 109, 112, 1.00);
+}
+
+.card__bottom h5{
+    color: rgb(0, 135, 90);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.card__bottom h5 span{
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 0.8rem;
+}
+
+.card__bottom p{
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+
+.card__top .save__icon{
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    padding: 5px 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card__top .save__icon i{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #33afaf;
+}
+
+

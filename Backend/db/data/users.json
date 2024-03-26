@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "65a79cceae1a4beb6fb22a0e"
+  },
+  "fullName": "admin",
+  "email": "admin@gmail.com",
+  "password": "$2b$10$GkWV4MRtMM6bp9ZGyAz/EeRwR7zfdi1wBn12jLH8AUo3ZcfxuW28y",
+  "phone": "0352503039",
+  "role": "admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a79d0d04c56b67c35fee4f"
+  },
+  "email": "hanggon2003@gmail.com",
+  "password": "$2b$10$u2xHuAWt1yDLsiV31rf2/esY9QJ8CIye9Ll2w4hp4HGfl3UEcyGhC",
+  "phone": "0352503039",
+  "role": "user",
+  "__v": 0
+}]

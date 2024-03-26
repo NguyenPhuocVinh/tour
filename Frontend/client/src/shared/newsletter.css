@@ -1,0 +1,92 @@
+
+
+.newsletter{
+    background:linear-gradient(rgba(0, 0, 0, 0.25),rgba(0, 0, 0, 0.25)), url('../assets/images/AboutTourist.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    padding: 0;
+    color: #fff;
+}
+
+.newsletter__img img{
+    width: 34%;
+    height: 34%;
+    margin-top: 30px;
+    margin-left: 150px;
+    border-radius: 13px 13px 0 0 ;
+}
+
+.newsletter__content{
+    padding: 50px ;
+    /* text-align: justify; */
+    letter-spacing: 0.5px;
+}
+
+.newsletter__content h2{
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.newsletter__content h5{
+    font-size: 1rem;
+    font-weight: 500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.newsletter__input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 0.3rem;
+    margin-bottom: 2rem;
+    border-radius: 10px ;
+}
+
+.newsletter__input i{
+    font-size: 1.2rem;
+    color: #33afaf;
+    margin-left: 8px;
+}
+
+.newsletter__input input{
+    border: none;
+    margin-right: 10rem;
+}
+
+.newsletter__input input::placeholder{
+    font-size: .9rem;
+    font-weight: 600;
+    color: rgba(3, 18, 26, 0.395);
+}
+
+.newsletter__input input:focus{
+    outline: none;
+}
+
+.newsletter__btn{
+    padding: 0.3rem 1.2rem !important;
+    background: #33afaf !important;
+    color: #fff !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+}
+
+.newsletter__btn p{
+    color: var(--heading-color);
+    font-size: 1.1rem;  
+    white-space: nowrap;
+}
+
+.newsletter__btn:hover{
+    background: rgba(0, 0, 0, 0.4) !important;
+    color: #fff !important;
+}
+
+.newsletter__content img{
+    width: 230px;
+    height: 100px;
+}

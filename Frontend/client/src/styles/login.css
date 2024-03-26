@@ -1,0 +1,134 @@
+.login__img {
+    background-image: linear-gradient(to right, #33afaf, #53c4c4);
+    width: 60%;
+    text-align: center;
+}
+
+.login__img img {
+    width: 75%;
+    margin-top: 9%;
+    object-fit: contain;
+}
+
+.login__form {
+    padding: 25px;
+    background-image: linear-gradient(to left, #33afaf, #53c4c4);
+    position: relative;
+}
+
+.login__container {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    margin: 20px;
+}
+
+.login__form h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login__form {
+    width: 55%;
+}
+
+.login__form input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: #21212166 1px solid;
+    font-size: 0.9rem;
+    color: var(--heading-color);
+}
+
+.login__form input::placeholder {
+    color: rgba(0, 0, 0, 0.277);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.login__form input:focus {
+    outline: none;
+}
+
+.auth__btn {
+    background: var(--heading-color) !important;
+    width: 100%;
+    color: #fff !important;
+}
+
+.login__form p {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.login__form p a {
+    color: var(--heading-color);
+    text-decoration: none;
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+.login__form p a:hover {
+    text-decoration: 2px underline;
+}
+
+.overlay {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: bottom 2s ease-in-out;
+}
+
+.success-form {
+    background-color: #fff;
+    padding: 10px 0;
+    border-radius: 20px;
+    box-shadow: 0px 1px 2px rgba(3, 18, 26, 0.373); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.success-form img{
+    width: 40%;
+    height: 40%;
+}
+
+.success-form h2 {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    color: #33afaf;
+}
+
+.success-form p {
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+    color: rgba(3, 18, 26, 0.593);
+}
+
+.password-input {
+    position: relative;
+}
+
+.password-input input {
+    padding-right: 40px;
+}
+
+.password-input span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    cursor: pointer;
+}
+

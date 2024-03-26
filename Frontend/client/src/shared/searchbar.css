@@ -1,0 +1,194 @@
+.search__img {
+    background: linear-gradient(rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.28)), url('../assets/images/VietNam5.png') no-repeat center center;
+    background-size: cover;
+    height: 455px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.search__img i{
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.search__img h2{
+    position: relative;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffffdf;
+    margin-bottom: -10px;
+}
+
+.search__img h2{
+    animation: 4s anim-lineUp ease-out;
+}
+
+@keyframes anim-lineUp {
+    0% {
+        opacity: 0;
+        transform: translateY(80%);
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes flip {
+
+    0%,
+    80% {
+        transform: rotateY(360deg)
+    }
+}
+
+.search__input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 0.1rem;
+    width: 80%;
+    margin-left: 8.5rem;    
+    margin-bottom: 25px;
+    border-radius: 25px;
+    border: rgba(0, 0, 0, 0.362) 4px solid;
+}
+
+.search__input i {
+    font-size: 1.4rem;
+    color: #33afaf;
+    margin-left: 10px;
+}
+
+.search__input input {
+    width: 100%;
+    border: none;
+    margin-left: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 4s,
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    75% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    50% {
+        width: 100%;
+    }
+}
+
+@keyframes typing {
+    25% {
+        width: 0;
+    }
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+}
+
+.search__input input::placeholder {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.search__input input:focus{
+    outline: none;
+}
+
+.search__btn {
+    padding: 0.3rem 1.5rem !important;
+    margin: 0.2rem;
+    background: #33afaf !important;
+    color: #fff !important;
+    font-size: 1rem !important;
+    border-radius: 20px !important;
+    white-space: nowrap;
+    font-weight: 500 !important;
+}
+
+.search__btn:hover {
+    cursor: pointer;
+    background-color: #2e9e9e !important;
+}
+
+.search__characters span{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffffe0;
+    margin-left: 10px;
+}
+
+.characters__suggest{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.5rem;
+}
+
+.characters__suggest span{
+    align-items: center;
+    justify-content: center;
+    display: unset;
+    padding: 7px 30px;
+    font-size: 1rem;
+    font-style:calc(1.1rem / 1.5);
+    color: #ffffffe0;
+    margin-left: 10px;
+    background-color: #2121215b;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+.characters__suggest span:hover{
+    background-color: #ffffff30;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.search__input {
+    position: relative;
+}
+
+.search__dropdown {
+    margin-top: 7px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.search__dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search__dropdown-item:hover {
+    background-color: #f5f5f5;
+}

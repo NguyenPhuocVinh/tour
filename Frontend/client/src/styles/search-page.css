@@ -1,0 +1,73 @@
+
+.header-search{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 100px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.108);
+}
+
+.header-search__row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.header-search__row .breadcrumb-item a{
+    font-size: 0.8rem;
+    color: rgba(67, 67, 67, 1.00);
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-search__row .breadcrumb-item.active{
+    font-size: 0.8rem;
+    color: rgb(1, 148, 243);
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5px;
+}
+
+.search-key{
+    padding-top: 8px;
+}
+
+.search-key p{
+    background-color: rgba(0, 0, 0, 0.04);
+    padding: 2px;
+    border-radius: 10px;
+}
+
+.search-key p strong{
+    font-size: 1rem;
+    color: rgb(192, 76, 54);
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-search{
+    background-color: rgba(0, 0, 0, 0.018)  ;
+}
+
+.result-search h6{
+    font-size: 1.2rem;
+    color: rgba(67, 67, 67, 1.00);
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 30px;
+}
+
+.search-bar{
+    padding-top: 25px;
+}
+
+.search__page-item img{
+    height: 150px;
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.search__page-item {
+    margin-top: 20px; 
+}
